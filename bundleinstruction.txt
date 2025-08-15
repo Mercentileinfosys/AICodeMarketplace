@@ -1,0 +1,111 @@
+# Bundle Management Instructions
+
+## Overview
+This document provides instructions for managing bundle products on the AI Code Marketplace. The bundle page is designed to showcase discounted packages of multiple AI templates.
+
+## Current Bundle Page Structure
+The bundle.html page currently has a "Coming Soon" placeholder. This needs to be replaced with actual bundle products when you're ready to upload them.
+
+## How to Add a New Bundle
+
+1. **Prepare Bundle Assets**:
+   - Create a high-quality bundle image (recommended size: 800x600px)
+   - Save the image in the "Phtots" folder (note the spelling)
+   - Prepare bundle description, features, and pricing information
+
+2. **Update the Bundle Page**:
+   - Replace the "Coming Soon" section with your bundle product
+   - Follow the template structure from templates.html for consistency
+   - Each bundle should include:
+     * Bundle image
+     * Title and description
+     * Price (original and discounted)
+     * Category tags
+     * "View Details" link to a dedicated bundle page
+
+3. **Bundle Card Structure**:
+   ```html
+   <div class="template bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" 
+        data-category="[categories]" data-price="[price]" data-date="[date]" 
+        onclick="window.location.href='[BundleDetailPage.html]'">
+       <div class="relative">
+           <img src="Phtots/[bundle-image].jpg" alt="[Bundle Name]" class="w-full h-48 object-cover">
+           <div class="absolute top-0 left-0 bg-[color]-600 text-white px-3 py-1 m-2 rounded-md text-sm font-medium">[Category]</div>
+           <div class="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 m-2 rounded-md text-sm font-medium">Save [X]%</div>
+       </div>
+       <div class="p-6">
+           <h3 class="text-xl font-bold mb-2">[Bundle Name]</h3>
+           <p class="text-gray-600 mb-4">[Bundle Description]</p>
+           <div class="flex flex-wrap gap-2 mb-4">
+               <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">HTML</span>
+               <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">Tailwind</span>
+               <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">JavaScript</span>
+               <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">APIs</span>
+           </div>
+           <div class="flex justify-between items-center">
+               <div>
+                   <span class="text-gray-400 line-through">$[original-price]</span>
+                   <span class="text-2xl font-bold text-indigo-600 ml-2">$[discounted-price]</span>
+               </div>
+               <div class="flex items-center">
+                   <span class="countdown text-xs text-gray-500 mr-1">Ends in:</span>
+                   <span class="countdown-badge text-xs px-2 py-1 rounded">12:00:00</span>
+               </div>
+           </div>
+           <div class="mt-4 flex justify-between">
+               <a href="[BundleDetailPage.html]" class="text-indigo-600 hover:text-indigo-800 font-medium">View Details</a>
+               <div class="flex space-x-2">
+                   <a href="#" class="text-gray-500 hover:text-indigo-600"><i class="fas fa-eye"></i></a>
+                   <a href="#" class="text-gray-500 hover:text-indigo-600"><i class="fas fa-shopping-cart"></i></a>
+               </div>
+           </div>
+       </div>
+   </div>
+   ```
+
+4. **Create Bundle Detail Pages**:
+   - For each bundle, create a dedicated detail page (e.g., ContentCreatorBundle.html)
+   - Include comprehensive information about what's included in the bundle
+   - List all templates that are part of the bundle with their features
+   - Add pricing information, discount details, and purchase options
+
+5. **Bundle Categories**:
+   The following categories are available for bundles:
+   - content: Content Creation tools
+   - business: Business-focused tools
+   - developer: Developer tools and utilities
+   - premium: High-value comprehensive bundles
+
+6. **Updating the Coming Soon Section**:
+   When you're ready to launch your first bundle, remove the entire "Coming Soon" section (lines ~80-100) and replace it with your bundle grid.
+
+## Best Practices
+
+1. **Pricing Strategy**:
+   - Ensure bundle pricing offers at least 25-30% savings compared to buying templates individually
+   - Highlight the original price with a strikethrough and the discounted bundle price
+
+2. **Bundle Composition**:
+   - Group related templates that work well together
+   - Include 3-5 templates per bundle for optimal value perception
+   - Consider creating themed bundles (e.g., Content Creator Bundle, Business Suite)
+
+3. **Visual Presentation**:
+   - Use high-quality images that represent the bundle contents
+   - Ensure consistent image dimensions across all bundles
+   - Use appropriate category colors for visual differentiation
+
+4. **Marketing Copy**:
+   - Clearly communicate the value proposition of each bundle
+   - Highlight time-limited offers with the countdown timer
+   - Use compelling descriptions that emphasize benefits
+
+## Technical Notes
+
+1. The bundle page uses the same filtering and sorting system as the templates page
+2. Bundle cards are filtered by their data-category attributes
+3. The countdown timer is synchronized with the templates page timer
+4. Bundle detail pages should follow the same structure as template detail pages
+
+## Support
+For any questions or issues related to bundle management, please contact the development team at aicodemarketplace@gmail.com.

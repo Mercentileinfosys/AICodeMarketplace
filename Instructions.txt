@@ -1,0 +1,62 @@
+
+## 🛠 How to Add New Products Daily
+
+1. Open `templates.html` in your code editor
+2. Locate the template section (commented with `<!-- TEMPLATE FOR NEW PRODUCTS -->`)
+3. Copy the template structure
+4. Paste it below the last product card in the `templates-grid` div
+5. Replace the placeholder values:
+   - `CATEGORY_HERE`: Choose from content, automation, chatbot, nologin, pdf
+   - `PRICE_HERE`: Set the product price (e.g., 49.99)
+   - `YYYY-MM-DD`: Set the current date for sorting purposes
+   - `IMAGE_NAME.png`: Use an image from the Phtots directory
+   - `PRODUCT_NAME`: Set your product name
+   - `PRODUCT_DESCRIPTION`: Add a compelling description
+   - `TECH_1`, `TECH_2`, `TECH_3`: List technologies used
+   - `DETAILS_PAGE_URL`: Link to product details (e.g., bundle.html)
+   - `LIVE_PREVIEW_URL`: Link to live demo
+   - `PURCHASE_URL`: Link to purchase page
+6. Save the file and upload to your hosting
+
+### Example Product Card:
+
+```html
+<div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 card-hover-effect" data-category="content" data-price="49.99" data-date="2023-12-15">                
+    <div class="relative">
+        <img src="Phtots/blog2.png" alt="AI Content Generator Template" class="w-full h-48 object-cover">
+        <div class="absolute top-4 left-4">
+            <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">Content AI</span>
+        </div>
+        <div class="absolute top-4 right-4">
+            <span class="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">$49.99</span>
+        </div>
+    </div>
+    <div class="p-6">
+        <h3 class="font-bold text-xl mb-2">AI Content Generator</h3>
+        <p class="text-gray-600 mb-4">Generate high-quality content for websites, blogs, and social media with advanced AI technology.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">HTML</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">JavaScript</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">OpenAI API</span>
+        </div>
+        <div class="flex justify-between">
+            <a href="bundle.html" class="text-indigo-600 hover:text-indigo-800 font-medium">View Details</a>
+            <div class="flex space-x-2">
+                <a href="https://example.com/preview" target="_blank" class="text-gray-500 hover:text-gray-700" title="Preview">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                </a>
+                <a href="https://example.com/purchase" target="_blank" class="text-gray-500 hover:text-gray-700" title="Buy Now">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+---Read
